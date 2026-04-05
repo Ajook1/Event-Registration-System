@@ -1,28 +1,32 @@
 # ===============================
-# Maven
+# Maven (All Microservices)
 # ===============================
-target/
+**/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 # ===============================
 # Logs
 # ===============================
 *.log
+logs/
+**/logs/
 
 # ===============================
 # OS Files
 # ===============================
 .DS_Store
+Thumbs.db
 
 # ===============================
 # IDE Files
 # ===============================
 
-# IntelliJ
+# IntelliJ IDEA
 .idea/
 *.iws
 *.iml
 *.ipr
+out/
 
 # Eclipse
 .project
@@ -33,21 +37,50 @@ target/
 .vscode/
 
 # ===============================
-# Application Secrets
+# Environment / Secrets
 # ===============================
 .env
+.env.*
 application-local.yml
 application-dev.yml
+application-prod.yml
+application-*.yml
+application-*.properties
 
 # ===============================
-# Build files
+# Build Outputs
 # ===============================
 *.jar
 *.war
 *.ear
 
 # ===============================
-# Temporary files
+# Temporary Files
 # ===============================
 *.tmp
 *.swp
+*.bak
+
+# ===============================
+# Node (if any frontend inside)
+# ===============================
+node_modules/
+dist/
+
+# ===============================
+# Docker (optional)
+# ===============================
+*.tar
+docker-compose.override.yml
+
+# ===============================
+# Test Reports
+# ===============================
+/test-output/
+/surefire-reports/
+
+# ===============================
+# Coverage Reports
+# ===============================
+/coverage/
+*.lcov
